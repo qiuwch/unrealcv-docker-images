@@ -8,4 +8,4 @@ ENV LD_LIBRARY_PATH /usr/local/nvidia/lib:/usr/local/nvidia/lib64:${LD_LIBRARY_P
 # CMD ["glxgears"]
 ENV __GL_SYNC_TO_VBLANK 0
 # CMD ["glxgears"]
-CMD ["bash"]
+# CMD ["bash"]

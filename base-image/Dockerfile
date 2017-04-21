@@ -21,3 +21,5 @@ USER unrealcv
 WORKDIR /home/unrealcv
 COPY *.sh /home/unrealcv/
 COPY .tmux.conf /home/unrealcv/
+
+CMD ["tmux"]
