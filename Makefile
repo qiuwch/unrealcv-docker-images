@@ -25,3 +25,6 @@ intel-image: ./intel-image/Dockerfile
 
 rr-image: ./rr-image/Dockerfile
 	docker build rr-image -t unrealcv/rr
+
+ue414-image: ./ue414-image/Dockerfile
+	docker build ue414-image -t unrealcv/ue414 --build-arg github_username=${github_username} --build-arg github_password=${github_password}
