@@ -1,6 +1,6 @@
 FROM ubuntu:16.04
 RUN apt-get update
-RUN apt-get install -y wget tmux sudo unzip vim git
+RUN apt-get install -y wget tmux sudo unzip vim git aptitude
 RUN apt-get install -y mesa-utils x11-xserver-utils
 
 # Configure python
@@ -16,6 +16,7 @@ RUN ln -s /usr/local/bin/ipython /usr/bin/ipython
 RUN useradd unrealcv -m -p ''
 # No password for unrealcv account
 RUN usermod -aG sudo unrealcv
+RUN echo "unrealcv ALL=(ALL) NOPASSWD:ALL" >> /etc/sudoers
 
 USER unrealcv
 WORKDIR /home/unrealcv
