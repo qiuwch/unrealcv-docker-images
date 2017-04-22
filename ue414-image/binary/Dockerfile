@@ -1,2 +1,3 @@
-FROM unrealcv/ue414_source
+FROM unrealcv/ue414_dependency
+RUN ./GenerateProjectFiles.sh
 RUN make
