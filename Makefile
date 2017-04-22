@@ -11,6 +11,7 @@ run-intel: intel-image
 --device=/dev/dri:/dev/dri --privileged unrealcv/base
 	# This one uses intel graphics card
 
+.PHONY: all base-image nvidia-image intel-image rr-image ue414-image
 # The order matters
 all: base-image rr-image nvidia-image intel-image
 
