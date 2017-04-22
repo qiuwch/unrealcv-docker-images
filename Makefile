@@ -14,17 +14,17 @@ run-intel: intel-image
 # The order matters
 all: base-image rr-image nvidia-image intel-image
 
-base-image: ./base-image/Dockerfile
+base-image:
 	docker build base-image -t unrealcv/base
 
-nvidia-image: ./nvidia-image/Dockerfile
+nvidia-image:
 	docker build nvidia-image -t unrealcv/nvidia
 
-intel-image: ./intel-image/Dockerfile
+intel-image:
 	docker build intel-image -t unrealcv/intel
 
-rr-image: ./rr-image/Dockerfile
+rr-image:
 	docker build rr-image -t unrealcv/rr
 
-ue414-image: ./ue414-image/Dockerfile
+ue414-image:
 	docker build ue414-image -t unrealcv/ue414 --build-arg github_username=${github_username} --build-arg github_password=${github_password}
