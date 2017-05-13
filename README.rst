@@ -1,3 +1,9 @@
+The docker images of unrealcv are used to solve three challenges.
+
+1. How to use UnrealCV binaries easily in a Linux server
+2. How to run UE4 editor with the installation of a lot of dependencies
+3. How to automatically run tests of UnrealCV
+
 Usage
 =====
 
