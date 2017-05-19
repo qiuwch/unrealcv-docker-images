@@ -1,7 +1,7 @@
 FROM ubuntu:16.04
 # FROM mono
 RUN apt-get update
-RUN apt-get install -y sudo
+RUN apt-get install -y sudo tzdata
 VOLUME /UE4
 # If this CMD failed, do it manually
 # CMD /UE4/Setup.sh && /UE4/GenerateProjectFiles.sh && cd /UE4 && make

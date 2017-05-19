@@ -8,8 +8,10 @@ build:
 	docker run -it --rm -v ${PWD}/UnrealEngine:/UE4 unrealcv/ue4-dependency make -C /UE4
 
 dependency:
+	echo "Build a basic image"
 	docker build ./build/ -t base-image
-	docker run -it --rm -v ${PWD}/UnrealEngine:/UE4 --name install-runner base-image sudo /UE4/Setup.sh
+	echo "Install all dependencies for UE4."
+	docker run -it -v ${PWD}/UnrealEngine:/UE4 --name install-runner base-image bash -c "sudo apt-get update; sudo /UE4/Setup.sh"
 	docker commit install-runner unrealcv/ue4-dependency
 	docker rm install-runner
 
