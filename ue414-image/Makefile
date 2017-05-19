@@ -9,7 +9,7 @@ build:
 
 dependency:
 	docker build ./build/ -t base-image
-	docker run -it -v ${PWD}/UnrealEngine:/UE4 --name install-runner base-image sudo /UE4/Setup.sh
+	docker run -it --rm -v ${PWD}/UnrealEngine:/UE4 --name install-runner base-image sudo /UE4/Setup.sh
 	docker commit install-runner unrealcv/ue4-dependency
 	docker rm install-runner
 
