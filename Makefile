@@ -24,3 +24,16 @@ intel-image:
 
 rr-image:
 	docker build rr-image -t unrealcv/rr
+
+barebone = qiuwch/ue4-barebone
+base = qiuwch/ue4-base
+
+ue4-base:
+	docker build ue-base -t $(barebone)
+	-git clone -b 4.14 https://github.com/EpicGames/UnrealEngine
+	# Try to remove first, in case the last run failed.
+	-docker rm setup-runner
+	docker run -it -v ${PWD}/UnrealEngine:/UE4 --name setup-runner $(barebone) bash -c "sudo apt-get update; sudo /UE4/Setup.sh"
+	docker commit setup-runner $(base)
+	docker rm setup-runner
+	docker push $(base)
