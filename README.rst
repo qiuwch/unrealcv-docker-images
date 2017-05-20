@@ -30,3 +30,8 @@ Images
 - base: Basic tools and configuration
 - intel: For intel GPU
 - nvidia: For nvidia GPU
+
+Run in a headless linux server
+==============================
+
+How to configure?
