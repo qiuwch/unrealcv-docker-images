@@ -18,3 +18,4 @@ https://unix.stackexchange.com/questions/118811/why-cant-i-run-gui-apps-from-roo
 
 Need to set both DISPLAY and XAUTHORITY
 
+`startx` will keep trying if `:0` is in use?
