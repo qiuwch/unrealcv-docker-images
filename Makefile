@@ -17,7 +17,7 @@ base-image:
 	docker build base-image -t unrealcv/base
 
 nvidia-image:
-	docker build nvidia-image -t unrealcv/nvidia
+	docker build nvidia-image -t qiuwch/nvidia
 
 intel-image:
 	docker build intel-image -t unrealcv/intel
