@@ -1,10 +1,9 @@
 FROM ubuntu:16.04
-RUN apt-get update
-RUN apt-get install -y wget tmux sudo unzip vim git aptitude
-RUN apt-get install -y mesa-utils x11-xserver-utils
+RUN apt-get update; apt-get install -y wget tmux sudo unzip vim git aptitude
+RUN apt-get update; apt-get install -y mesa-utils x11-xserver-utils
 
 # Configure python
-RUN apt-get install -y python python-pip
+RUN apt-get update; apt-get install -y python python-pip
 RUN pip install --upgrade pip
 # The ipython from pip is newer than the ubuntu version
 RUN pip install ipython
